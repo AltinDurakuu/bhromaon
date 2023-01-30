@@ -1,0 +1,32 @@
+//silence-is-golden
+.main-footer{
+    background: #232323;
+    text-align: center;
+    padding-top: 112px;
+    padding-bottom: 46px;
+    &__text{
+        a{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: line-height-em(24px, 26px);
+            letter-spacing: letter-spacing-em(24px,3.36px);
+        } 
+        p{
+            @include style-p;
+            letter-spacing: letter-spacing-em(16px, 1.6px);
+            font-family: $josefin-font;
+            margin-bottom: 17px;
+        }
+    }
+    i{
+        color: $primary-color;
+        padding: 8px;
+        margin-right: 4px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            color: $blue-color;
+        }
+    }
+}

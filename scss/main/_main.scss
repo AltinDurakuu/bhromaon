@@ -1,0 +1,182 @@
+//silence-is-golden
+.about-us{
+    background: url(../../assets/about-us-background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container{
+        padding-left: 30px;
+        padding-right: 31px;
+        padding-top: 117px;
+        padding-bottom: 117px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-text{
+        width: 52%;
+        &__title{
+            @include style-title;
+            margin-bottom: 50px;
+        }
+        p{
+            @include style-p;
+            letter-spacing: letter-spacing-em(16px, 1.6px);
+            margin-bottom: 45px;
+        }
+    }
+    &-imgs{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__img:first-child{
+        align-self: center;
+        margin-bottom: 5px;
+    }
+    &__img:last-child{
+        align-self: flex-end;
+    }
+}
+.book-places{
+    background: #333;
+    padding-top: 60px;
+    padding-bottom: 77px;
+    .container{
+        position: relative;
+        &>img{
+            width: 720px;
+            position: absolute;
+            top: -35px;
+            left: 200px;
+        }
+    }
+    i{
+        color: $blue-color;
+        font-size:40px;
+        margin-bottom: 35px;
+    }
+    .flex-container{
+        display: flex;
+        justify-content: center;
+        a {
+            margin-right: 143px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            z-index: 2;
+            background: #333;
+            @include style-title;
+            color: #e8e8e8;
+            font-weight: 400;
+            &:hover{
+                color: #fff;
+            }
+        }
+        a:last-child{
+            margin-right: 0;
+        }
+        a:nth-child(2){
+            i{
+                color: orangered;
+            }
+        }
+    }
+}
+.spain{
+    .container{
+        padding: 227px 30px 99px 30px;
+    }
+    &-content{
+        max-width: 543px;
+        padding: 50px 30px;
+        background: rgba($color: #232323, $alpha: 0.9);
+        span{
+            font-size: 20px;
+            line-height: line-height-em(20px, 26px);
+            color: #e8e8e8;
+            letter-spacing: letter-spacing-em(20px, 1.5px);
+            text-transform: capitalize;
+        }
+        h4{
+            font-size: 20px;
+            line-height: line-height-em(20px, 26px);
+            color: $primary-color;
+            margin-top: 23px;
+            margin-bottom: 13px;
+            text-transform: uppercase;
+        }
+        p{
+            @include style-p;
+            margin-bottom: 46px;
+        }
+    }
+    &1{
+        background: url(../../assets/spain1-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .container{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+    &2{
+        background: url(../../assets/spain2-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .container{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.tourists-for-us{
+    padding-top: 128px;
+    padding-bottom: 199px;
+    background: url(../../assets/tourist-for-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-content{
+        display: flex;
+        align-items: center;
+    }
+    &__img{
+        width: 40%;
+    }
+    h3{
+        @include style-title;
+        text-align: center;
+        margin-bottom: 91px;
+    }
+    &__text{
+        width: 60%;
+        padding-left: 59px;
+        padding-right: 25px;
+        padding-top: 49px;
+        padding-bottom: 39px;
+        background: #333;
+        align-self: flex-start;
+        h5{
+            font-size: 20px;
+            color: $primary-color;
+            line-height: line-height-em(20px,26px);
+            margin-bottom: 8px;
+        }
+        p{
+            @include style-p;
+            letter-spacing: letter-spacing-em(16px, 0.3px);
+            &::before{
+                content: "\f10d";
+                font-family: 'FontAwesome';
+                color: $blue-color;
+                font-size: 32px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

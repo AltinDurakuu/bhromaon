@@ -1,0 +1,147 @@
+//silence-is-golden
+.main-header{
+    .hero{
+        height: 737px;
+        background: url(../../assets/header-img.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            h1{
+                font-family: $josefin-font;
+                font-size: 48px;
+                font-weight: 700;
+                letter-spacing: letter-spacing-em(48px ,4.8px);
+                color: $primary-color;
+                line-height: line-height-em(48px, 26px);
+                text-transform: uppercase;
+                margin-bottom: 11px;            }
+            h2{
+                font-size: 22px;
+                line-height: line-height-em(22px, 26px);
+                color: #fff;
+                margin-bottom: 48px;
+                letter-spacing: letter-spacing-em(22px ,6.82px);
+            }
+            form{
+                display: flex;
+                margin-bottom: 107px;
+                .input-group:first-child{
+                    width: 503px;
+                }
+                input[type="text"]{
+                    text-align: center;
+                    width: 100%;
+                    overflow: visible;
+                    outline: none;
+                    font-size: 14px;
+                    height: 63px;
+                    line-height: 63px;
+                    border: none;
+                    font-family: $aleo-font;
+                    letter-spacing: letter-spacing-em(14px ,2.8px);
+                    &:focus{
+                        background: #f3f3f3;
+                    }
+                }
+                .search-bar{
+                    @include style-smaller-p;
+                    font-family: $aleo-font;
+                    background-size: $primary-color;
+                    border: 2px solid $primary-color;
+                    height: 63px;
+                    background: $blue-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 36px;
+                    padding-right: 18px;
+                    letter-spacing: letter-spacing-em(14px ,1.4px);
+                    outline: none;
+                    position: relative;
+                    transition: all .3s ease-in-out;
+                    overflow: hidden;
+                    & span{
+                        z-index: 2;
+                        display: flex;
+                        align-items: center;
+                    }
+                    img {
+                        margin-left: 13px;
+                    }
+                    &:active{
+                        transform: scale(0.97);
+                    }
+                    &::before{
+                        content: "";
+                        width: 120px;
+                        transform: translate(-145px,-35px) rotate(45deg);
+                        height: 63px;
+                        position: absolute;
+                        background: #496BFE;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &::after{
+                        content: "";
+                        width: 120px;
+                        transform: translate(140px,35px) rotate(45deg);
+                        height: 63px;
+                        position: absolute;
+                        background: #496BFE;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover::before{
+                        transform: translate(-20px,0) rotate(0);
+                    }
+                    &:hover::after{
+                        transform: translate(20px,0) rotate(0);
+                    }
+                }
+            }
+            .scroll-down a{
+                @include style-smaller-p;
+                letter-spacing: letter-spacing-em(14px, 2.8px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .main-nav{
+        background-color: $blue-color;
+        padding-top: 32px;
+        padding-bottom: 25px;
+        .container{
+        padding-left: 34px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        nav ul{
+            display: flex;
+            text-transform: uppercase;
+            font-family: $aleo-font;
+            @include style-smaller-p;
+            li{
+                margin-right: 42px;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            li:last-child{
+                margin-right: 0;
+            }
+        }
+        }
+    }
+}

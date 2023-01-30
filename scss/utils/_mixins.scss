@@ -1,0 +1,38 @@
+//silence-is-golden
+@function line-height-em($font-size, $line-height-px){
+    $line-height: ($line-height-px / $font-size);
+    @return $line-height+em;
+}
+@function letter-spacing-em($font-size, $letter-spacing-px){
+    $letter-spacing-em: ($letter-spacing-px / $font-size);
+    @return $letter-spacing-em+em;
+}
+@mixin style-title {
+    font-family: $aleo-font;
+    font-size: 36px;
+    line-height: 0.72em;
+    color: $primary-color;
+}
+@mixin style-smaller-p {
+    font-size: 14px;
+    line-height: 1.85em;
+    color: $primary-color;
+}
+@mixin style-p {
+    font-size: 16px;
+    line-height: 1.625em;
+    color: $article-p-color;
+}
+@mixin style-btn {
+    width: 228px;
+    height: 63px;
+    font-family: $aleo-font;
+    line-height: 63px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(225deg, $blue-color 60%,  #496BFE 60%);
+    &:hover{
+        background: linear-gradient(225deg, #496BFE 60%,  $blue-color 60%);
+        transform: scale(0.97);
+    }
+}

@@ -1,0 +1,24 @@
+//silence-is-golden
+body{
+    font-family: $josefin-font;
+}
+svg,img{
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    max-width: 1137px;
+    margin: 0 auto;
+}
+.full-block{
+    float: left;
+    width: 100%;
+}
+a{
+    color: $primary-color;
+    text-decoration: none;
+}
+.btn{
+    @include style-btn;
+    float: left;
+}
